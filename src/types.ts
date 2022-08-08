@@ -1,3 +1,5 @@
-import { type ViteSSGContext } from 'vite-ssg'
+type ViteVueContext = {
+  
+}
 
-export type UserModule = (ctx: ViteSSGContext) => void
+export type UserModule = (ctx: ViteVueContext) => void
