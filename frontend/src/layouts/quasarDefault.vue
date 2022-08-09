@@ -1,21 +1,9 @@
 <script setup lang="ts">
-// import { RouteRecordRaw, useRouter } from "vue-router";
-import {
-  // LocalStorage,
-  useQuasar,
-} from "quasar";
+import { useQuasar } from "quasar";
+import cs from "quasar/lang/cs";
+import en from "quasar/lang/en-US";
 import { useAuthenticated, useUserData } from "@nhost/vue";
-import languages from "quasar/lang/index.json";
-
-const appLanguages = languages.filter((lang) => ["cs", "en-US"].includes(lang.isoName));
-
-const langOptions = appLanguages.map((lang) => ({
-  label: lang.nativeName,
-  value: lang.isoName,
-}));
 const { t, availableLocales, locale } = useI18n();
-// const router = useRouter();
-// const useRoutes: RouteRecordRaw[] | null = LocalStorage.getItem("routes");
 const leftDrawerOpen = ref<boolean>(false);
 const q = useQuasar();
 const toggleLocales = () => {
@@ -132,18 +120,17 @@ const links = computed(() => {
     });
 });
 watch(locale, (val) => {
-  // q.lang.set(en);
-  const localeApp = langOptions.find((l) => l.value.includes(val));
-  // console.log(localeApp);
-  // dynamic import, so loading on demand only
-  import(
-    /* webpackInclude: /(de|en-US)\.js$/ */
-    "../../node_modules/quasar/lang/" + localeApp?.value
-  ).then((lang) => {
-    // console.log(lang);
-    q.lang.set(lang.default);
-    // console.log(q.lang.getLocale());
-  });
+  switch (val) {
+    case "cs":
+      q.lang.set(cs);
+      break;
+    case "en":
+      q.lang.set(en);
+      break;
+
+    default:
+      break;
+  }
 });
 </script>
 
