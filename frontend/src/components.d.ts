@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     EssentialLink: typeof import('./components/EssentialLink.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     QBtn: typeof import('quasar')['QBtn']
+    QDate: typeof import('quasar')['QDate']
     QIcon: typeof import('quasar')['QIcon']
     QImg: typeof import('quasar')['QImg']
     QInput: typeof import('quasar')['QInput']

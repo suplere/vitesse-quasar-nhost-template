@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useResetPassword } from "@nhost/vue";
 import { QSpinnerGears, QForm, useQuasar } from "quasar";
-
+const appUrl = import.meta.env.VITE_FRONTEND_URL;
 const forgotPasswordForm = $ref<QForm | null>(null);
 const q = useQuasar();
 const router = useRouter();
 const { resetPassword } = useResetPassword({
-  redirectTo: "http://localhost:4010/profile",
+  redirectTo: `${appUrl}/profile`,
 });
 const email = $ref("");
 const { t } = useI18n();

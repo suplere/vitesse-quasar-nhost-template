@@ -5,23 +5,37 @@ import {
   useQuasar,
 } from "quasar";
 import { useAuthenticated, useUserData } from "@nhost/vue";
+import languages from "quasar/lang/index.json";
+
+const appLanguages = languages.filter((lang) => ["cs", "en-US"].includes(lang.isoName));
+
+const langOptions = appLanguages.map((lang) => ({
+  label: lang.nativeName,
+  value: lang.isoName,
+}));
 const { t, availableLocales, locale } = useI18n();
 // const router = useRouter();
 // const useRoutes: RouteRecordRaw[] | null = LocalStorage.getItem("routes");
 const leftDrawerOpen = ref<boolean>(false);
-
+const q = useQuasar();
 const toggleLocales = () => {
   // change to some real logic
   const locales = availableLocales;
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length];
 };
-const q = useQuasar();
+
 const onToggleDark = () => {
   toggleDark();
   q.dark.set(isDark.value);
 };
 
 const linksData = [
+  {
+    title: () => t("button.home"),
+    caption: () => "",
+    icon: "home",
+    link: "/",
+  },
   {
     title: () => t("menu.notAuthenticatedTitle"),
     caption: () => t("menu.notAuthenticatedDescription"),
@@ -35,6 +49,12 @@ const linksData = [
     link: "/profile",
     auth: true,
     role: "user",
+  },
+  {
+    title: () => t("button.about"),
+    caption: () => "",
+    icon: "description",
+    link: "/about",
   },
   // {
   //   title: () => t("menu.trainerMainTitle"),
@@ -111,6 +131,20 @@ const links = computed(() => {
       }
     });
 });
+watch(locale, (val) => {
+  // q.lang.set(en);
+  const localeApp = langOptions.find((l) => l.value.includes(val));
+  // console.log(localeApp);
+  // dynamic import, so loading on demand only
+  import(
+    /* webpackInclude: /(de|en-US)\.js$/ */
+    "../../node_modules/quasar/lang/" + localeApp?.value
+  ).then((lang) => {
+    // console.log(lang);
+    q.lang.set(lang.default);
+    // console.log(q.lang.getLocale());
+  });
+});
 </script>
 
 <template>
@@ -126,7 +160,7 @@ const links = computed(() => {
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title> {{ t("layout.appName") }} </q-toolbar-title>
+        <q-toolbar-title to="/"> {{ t("layout.appName") }} </q-toolbar-title>
         <q-btn
           flat
           :icon="isDark ? 'dark_mode' : 'light_mode'"
