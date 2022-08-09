@@ -1,0 +1,26 @@
+button:
+  about: O
+  back: Zpět
+  go: JÍT
+  home: Doma
+  toggle_dark: Přepnutí tmavého režimu
+  toggle_langs: Změna jazyku
+intro:
+  aka: Také známý jako
+  desc: Předběžná šablona Vite
+  dynamic-route: Demo dynamické trasy
+  hi: Ahoj, {name}!
+  whats-your-name: Jaké je tvé jméno?
+layout:
+  appName: Šablona NHost + Quasar + Vite
+  mainMenu: Hlavní menu
+menu:
+  loginDescription: Přihlášení uživatele
+  loginTitle: Přihlášení
+  logoutDescription: Odhlášení uživatele
+  logoutTitle: Odhlášení
+  notAuthenticatedDescription: Pro anonymní uživatele
+  notAuthenticatedTitle: Nechráněná stránka
+  profileDescription: Úprava profilu uživatele
+  profileTitle: Profil
+not-found: Nenalezeno
