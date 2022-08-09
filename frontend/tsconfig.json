@@ -26,5 +26,5 @@
       "~/*": ["src/*"]
     }
   },
-  "exclude": ["dist", "node_modules", "cypress", "nhost-demo-template" ]
+  "exclude": ["dist", "node_modules" ]
 }

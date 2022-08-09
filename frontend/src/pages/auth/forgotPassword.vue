@@ -5,7 +5,9 @@ import { QSpinnerGears, QForm, useQuasar } from "quasar";
 const forgotPasswordForm = $ref<QForm | null>(null);
 const q = useQuasar();
 const router = useRouter();
-const { resetPassword } = useResetPassword();
+const { resetPassword } = useResetPassword({
+  redirectTo: "http://localhost:4010/profile",
+});
 const email = $ref("");
 const { t } = useI18n();
 const onSubmit = () => {

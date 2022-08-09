@@ -1,3 +1,11 @@
+auth:
+  forgotPasswordMessage: Obnovení zapomenutého hesla přes email.
+  forgotPasswordTitle: Zapomenuté heslo
+  loginTitle: Přihlášení uživatele
+  registerTitle: Registace uživatele
+  toForgotPassword: Zapomenuté heslo
+  toLogin: Mám účet. Chci se přihlásit.
+  toRegister: Nemám účet. Vytvořit nový.
 button:
   about: O
   back: Zpět
@@ -5,6 +13,18 @@ button:
   home: Doma
   toggle_dark: Přepnutí tmavého režimu
   toggle_langs: Změna jazyku
+forgotPassword:
+  button: Zapomenuté heslo
+  errorTitle: Došlo k chybě při zpracování požadavku na obnovu hesla.
+  successTitle: Požadavek byl zpracován. Zkontrolujte si prosím svou emailovou schránku.
+  userMessage: Požadavek na obnovu hesla je zpracováván
+form:
+  email: Email
+  firstname: Jméno
+  lastname: Příjmení
+  mobile: Mobilní telefon
+  password: Heslo
+  passwordMatch: Potvrzení hesla
 intro:
   aka: Také známý jako
   desc: Předběžná šablona Vite
@@ -14,6 +34,10 @@ intro:
 layout:
   appName: Šablona NHost + Quasar + Vite
   mainMenu: Hlavní menu
+login:
+  button: Přihlášení uživatele
+  errorTitle: Došlok chybě při přihlášení uživatele.
+  userMessage: Požadavek na přihlášení je zpracováván.
 menu:
   loginDescription: Přihlášení uživatele
   loginTitle: Přihlášení
@@ -24,3 +48,12 @@ menu:
   profileDescription: Úprava profilu uživatele
   profileTitle: Profil
 not-found: Nenalezeno
+register:
+  button: Registrace uživatele
+  errorTitle: Došlo k chybě při vytváření nového účtu.
+  messageSent: Nový účet vytvořen. Zkontrolujte emailovou schránku a potvrďte svůj email.
+  userMessage: POždavek na vytvoření nového účtu je zpracováván.
+validation:
+  emailNotValid: Email nemá správný formát
+  passwordDontMatch: Hesla nesouhlasí
+  requiredField: Pole je povinné

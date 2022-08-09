@@ -1,3 +1,15 @@
+auth:
+  forgotPasswordMessage: Recovering a forgotten password via email.
+  forgotPasswordTitle: Forgotten password
+  loginTitle: User login
+  registerTitle: User registration
+  toForgotPassword: Forgotten password
+  toLogin: |-
+    I have an account. 
+    I want to log in.
+  toRegister: |-
+    I don't have an account. 
+    Create a new one.
 button:
   about: About
   back: Back
@@ -5,6 +17,20 @@ button:
   home: Home
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+forgotPassword:
+  button: Forgotten password
+  errorTitle: An error occurred while processing the password reset request.
+  successTitle: |-
+    The request has been processed. 
+    Please check your email inbox.
+  userMessage: Your password reset request is being processed
+form:
+  email: E-mail
+  firstname: Name
+  lastname: Surname
+  mobile: Mobile phone
+  password: Password
+  passwordMatch: Password confirmation
 intro:
   aka: Also known as
   desc: Opinionated Vite Starter Template
@@ -14,6 +40,10 @@ intro:
 layout:
   appName: NHost Quasar Vite template
   mainMenu: Main menu
+login:
+  button: User login
+  errorTitle: An error occurred while logging in the user.
+  userMessage: Your login request is being processed.
 menu:
   loginDescription: User login
   loginTitle: Login
@@ -24,3 +54,14 @@ menu:
   profileDescription: Edit user profile
   profileTitle: Profile
 not-found: Not found
+register:
+  button: User registration
+  errorTitle: An error occurred while creating a new account.
+  messageSent: |-
+    New account created. 
+    Check your email inbox and confirm your email.
+  userMessage: The request to create a new account is being processed.
+validation:
+  emailNotValid: The email is not in the correct format
+  passwordDontMatch: Passwords do not match
+  requiredField: Field is required
