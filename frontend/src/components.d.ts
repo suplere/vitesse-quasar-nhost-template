@@ -7,10 +7,18 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AvatarEdit: typeof import('./components/AvatarEdit.vue')['default']
+    ChangePassword: typeof import('./components/ChangePassword.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     EssentialLink: typeof import('./components/EssentialLink.vue')['default']
+    FileUploader: typeof import('./components/FileUploader.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    ProfileEdit: typeof import('./components/ProfileEdit.vue')['default']
+    QAvatar: typeof import('quasar')['QAvatar']
     QBtn: typeof import('quasar')['QBtn']
+    QCard: typeof import('quasar')['QCard']
+    QCardActions: typeof import('quasar')['QCardActions']
+    QCardSection: typeof import('quasar')['QCardSection']
     QDate: typeof import('quasar')['QDate']
     QIcon: typeof import('quasar')['QIcon']
     QImg: typeof import('quasar')['QImg']

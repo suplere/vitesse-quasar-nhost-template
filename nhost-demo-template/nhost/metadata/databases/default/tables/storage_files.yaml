@@ -49,3 +49,92 @@ object_relationships:
 - name: bucket
   using:
     foreign_key_constraint_on: bucket_id
+insert_permissions:
+- permission:
+    check:
+      _or:
+      - id:
+          _eq: X-Hasura-User-Id
+    columns:
+    - is_uploaded
+    - size
+    - bucket_id
+    - etag
+    - mime_type
+    - name
+    - created_at
+    - updated_at
+    - id
+    - uploaded_by_user_id
+  role: user
+select_permissions:
+- permission:
+    allow_aggregations: true
+    columns:
+    - is_uploaded
+    - size
+    - bucket_id
+    - etag
+    - mime_type
+    - name
+    - created_at
+    - updated_at
+    - id
+    - uploaded_by_user_id
+    filter:
+      _or:
+      - bucket:
+          id:
+            _eq: default
+  role: public
+- permission:
+    allow_aggregations: true
+    columns:
+    - is_uploaded
+    - size
+    - bucket_id
+    - etag
+    - mime_type
+    - name
+    - created_at
+    - updated_at
+    - id
+    - uploaded_by_user_id
+    filter:
+      _or:
+      - bucket:
+          id:
+            _eq: default
+      - uploaded_by_user_id:
+          _eq: X-Hasura-User-Id
+  role: user
+update_permissions:
+- permission:
+    check:
+      _or:
+      - id:
+          _eq: X-Hasura-User-Id
+    columns:
+    - is_uploaded
+    - size
+    - bucket_id
+    - etag
+    - mime_type
+    - name
+    - created_at
+    - updated_at
+    - id
+    - uploaded_by_user_id
+    filter:
+      _or:
+      - id:
+          _eq: X-Hasura-User-Id
+  role: user
+delete_permissions:
+- permission:
+    backend_only: false
+    filter:
+      _or:
+      - id:
+          _eq: X-Hasura-User-Id
+  role: user

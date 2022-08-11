@@ -25,12 +25,6 @@ const linksData = [
     link: "/",
   },
   {
-    title: () => t("menu.notAuthenticatedTitle"),
-    caption: () => t("menu.notAuthenticatedDescription"),
-    icon: "accessibility",
-    link: "/home",
-  },
-  {
     title: () => t("menu.profileTitle"),
     caption: () => t("menu.profileDescription"),
     icon: "school",
@@ -44,36 +38,6 @@ const linksData = [
     icon: "description",
     link: "/about",
   },
-  // {
-  //   title: () => t("menu.trainerMainTitle"),
-  //   caption: () => t("menu.trainerMainDescription"),
-  //   icon: "eva-person-done-outline",
-  //   link: null,
-  //   role: "trainer",
-  //   submenu: [
-  //     {
-  //       title: () => t("menu.trainerWorklogTitle"),
-  //       caption: () => t("menu.trainerWorklogDescription"),
-  //       icon: "eva-file-text-outline",
-  //       link: "/trainer/worklog",
-  //       role: "trainer",
-  //     },
-  //     {
-  //       title: () => t("menu.playerStatsTitle"),
-  //       caption: () => t("menu.playerStatsDescription"),
-  //       icon: "eva-pantone-outline",
-  //       link: "/trainer/attendance",
-  //       role: "trainer",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: () => t("menu.administrationTitle"),
-  //   caption: () => t("menu.administrationDescription"),
-  //   icon: "eva-people-outline",
-  //   link: "/admin/",
-  //   role: "admin",
-  // },
   {
     title: () => t("menu.loginTitle"),
     caption: () => t("menu.loginDescription"),
@@ -171,9 +135,9 @@ watch(locale, (val) => {
 
     <q-page-container>
       <div class="py-2 mx-auto text-center text-sm">[Default Layout]</div>
-      <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component, route }">
         <transition name="slide-fade" mode="out-in">
-          <component :is="Component" />
+          <component :is="Component" :key="route" />
         </transition>
       </router-view>
     </q-page-container>

@@ -30,7 +30,7 @@ const onSubmit = () => {
             color: "negative",
           });
         } else {
-          router.push({ path: "/home" });
+          router.push({ path: "/" });
         }
       } catch (err) {
         console.error(err);

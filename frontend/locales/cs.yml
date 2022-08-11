@@ -1,4 +1,5 @@
 auth:
+  changePasswordTitle: Změna hesla
   forgotPasswordMessage: Obnovení zapomenutého hesla přes email.
   forgotPasswordTitle: Zapomenuté heslo
   loginTitle: Přihlášení uživatele
@@ -9,6 +10,7 @@ auth:
 button:
   about: O
   back: Zpět
+  deleteAvatar: Smazat Avatar
   go: JÍT
   home: Doma
   toggle_dark: Přepnutí tmavého režimu
@@ -19,12 +21,18 @@ forgotPassword:
   successTitle: Požadavek byl zpracován. Zkontrolujte si prosím svou emailovou schránku.
   userMessage: Požadavek na obnovu hesla je zpracováván
 form:
+  cancel: Zrušit
+  delete: Smazat
+  displayName: Zobrazené jméno
+  edit: Upravit
   email: Email
   firstname: Jméno
   lastname: Příjmení
   mobile: Mobilní telefon
   password: Heslo
   passwordMatch: Potvrzení hesla
+  save: Uložit
+  uploadFile: Zde prosím nahrajte obrázek
 intro:
   aka: Také známý jako
   desc: Předběžná šablona Vite
@@ -47,7 +55,18 @@ menu:
   notAuthenticatedTitle: Nechráněná stránka
   profileDescription: Úprava profilu uživatele
   profileTitle: Profil
+newPassword:
+  button: Změna hesla
+  userMessage: Požadavek na změnu hesla se zpracovává
+newpassword:
+  error: Chyba při změně hesla
+  paswordChange: Heslo bylo změněno
 not-found: Nenalezeno
+page:
+  profile:
+    title: Profil uživatele
+profile:
+  saveUserData: Uložit změny
 register:
   button: Registrace uživatele
   errorTitle: Došlo k chybě při vytváření nového účtu.

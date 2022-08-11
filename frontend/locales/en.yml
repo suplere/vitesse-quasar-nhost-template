@@ -1,4 +1,5 @@
 auth:
+  changePasswordTitle: Changing the password
   forgotPasswordMessage: Recovering a forgotten password via email.
   forgotPasswordTitle: Forgotten password
   loginTitle: User login
@@ -13,6 +14,7 @@ auth:
 button:
   about: About
   back: Back
+  deleteAvatar: Delete Avatar
   go: GO
   home: Home
   toggle_dark: Toggle dark mode
@@ -25,12 +27,18 @@ forgotPassword:
     Please check your email inbox.
   userMessage: Your password reset request is being processed
 form:
+  cancel: Cancel
+  delete: Delete
+  displayName: Display name
+  edit: Edit
   email: E-mail
   firstname: Name
   lastname: Surname
   mobile: Mobile phone
   password: Password
   passwordMatch: Password confirmation
+  save: Save
+  uploadFile: Please upload an image here
 intro:
   aka: Also known as
   desc: Opinionated Vite Starter Template
@@ -53,7 +61,18 @@ menu:
   notAuthenticatedTitle: Unprotected page
   profileDescription: Edit user profile
   profileTitle: Profile
+newPassword:
+  button: Changing the password
+  userMessage: Your password change request is being processed
+newpassword:
+  error: Error changing password
+  paswordChange: The password has been changed
 not-found: Not found
+page:
+  profile:
+    title: User profile
+profile:
+  saveUserData: Save Changes
 register:
   button: User registration
   errorTitle: An error occurred while creating a new account.

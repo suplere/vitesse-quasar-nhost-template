@@ -105,3 +105,40 @@ array_relationships:
       table:
         name: user_providers
         schema: auth
+insert_permissions:
+- permission:
+    check:
+      id:
+        _eq: X-Hasura-User-Id
+    columns:
+    - avatar_url
+    - display_name
+    - email
+    - id
+    - metadata
+  role: user
+select_permissions:
+- permission:
+    allow_aggregations: true
+    columns:
+    - avatar_url
+    - display_name
+    - email
+    - id
+    - metadata
+    filter: {}
+  role: user
+update_permissions:
+- permission:
+    check:
+      id:
+        _eq: X-Hasura-User-Id
+    columns:
+    - avatar_url
+    - display_name
+    - id
+    - metadata
+    filter:
+      id:
+        _eq: X-Hasura-User-Id
+  role: user
