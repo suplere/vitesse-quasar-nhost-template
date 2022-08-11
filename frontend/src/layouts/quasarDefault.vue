@@ -91,7 +91,6 @@ watch(locale, (val) => {
     case "en":
       q.lang.set(en);
       break;
-
     default:
       break;
   }

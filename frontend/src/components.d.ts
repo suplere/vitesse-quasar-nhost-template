@@ -19,7 +19,6 @@ declare module '@vue/runtime-core' {
     QCard: typeof import('quasar')['QCard']
     QCardActions: typeof import('quasar')['QCardActions']
     QCardSection: typeof import('quasar')['QCardSection']
-    QDate: typeof import('quasar')['QDate']
     QIcon: typeof import('quasar')['QIcon']
     QImg: typeof import('quasar')['QImg']
     QInput: typeof import('quasar')['QInput']
