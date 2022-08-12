@@ -1,5 +1,6 @@
 auth:
   changePasswordTitle: Changing the password
+  changePasswordTitleError: It is not possible to change the password for a test user!
   forgotPasswordMessage: Recovering a forgotten password via email.
   forgotPasswordTitle: Forgotten password
   loginTitle: User login

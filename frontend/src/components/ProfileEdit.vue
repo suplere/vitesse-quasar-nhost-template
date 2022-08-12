@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nhost } from "~/modules/nhost";
-import { useUserData } from "@nhost/vue";
+import { useUserData, useUserEmail } from "@nhost/vue";
 import { QInput } from "quasar";
 import AvatarEdit from "~/components/AvatarEdit.vue";
 
@@ -19,6 +19,8 @@ interface UpdateUser {
 }
 const { t } = useI18n();
 const userData = useUserData();
+const userEmail = useUserEmail();
+const isNotTestUSer = computed(() => userEmail.value !== "user@example.com");
 const remountCounter = ref(0);
 const schema = [
   {
@@ -159,7 +161,10 @@ watch(
   <QCard class="full-width">
     <QCardSection>
       <div class="text-center text-h6">{{ t("auth.changePasswordTitle") }}</div>
-      <ChangePassword class="q-my-sm" :redirect="false" />
+      <ChangePassword v-if="isNotTestUSer" class="q-my-sm" :redirect="false" />
+      <div v-else class="text-center text-subtitle">
+        {{ t("auth.changePasswordTitleError") }}
+      </div>
     </QCardSection>
   </QCard>
 </template>

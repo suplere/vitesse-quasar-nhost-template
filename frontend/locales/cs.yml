@@ -1,5 +1,6 @@
 auth:
   changePasswordTitle: Změna hesla
+  changePasswordTitleError: Nelze měnit heslo u testovacího uživatele!
   forgotPasswordMessage: Obnovení zapomenutého hesla přes email.
   forgotPasswordTitle: Zapomenuté heslo
   loginTitle: Přihlášení uživatele
