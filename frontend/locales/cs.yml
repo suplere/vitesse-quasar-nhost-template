@@ -38,6 +38,8 @@ intro:
   desc: Předběžná šablona Vite
   dynamic-route: Demo dynamické trasy
   hi: Ahoj, {name}!
+  testMessage: 'Pro testovací účely na mém livedemu můžete použít tyto údaje:'
+  testMessageCreteOwn: Nebo si vytvořte vlastní účet, přes funkci vytvoření nového uživatele.
   whats-your-name: Jaké je tvé jméno?
 layout:
   appName: Šablona NHost + Quasar + Vite

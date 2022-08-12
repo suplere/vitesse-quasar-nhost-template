@@ -44,6 +44,8 @@ intro:
   desc: Opinionated Vite Starter Template
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
+  testMessage: 'You can use the following data for testing purposes on my live demo:'
+  testMessageCreteOwn: Or create your own account via the function of creating a new user.
   whats-your-name: What's your name?
 layout:
   appName: NHost Quasar Vite template

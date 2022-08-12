@@ -17,7 +17,11 @@ const { t } = useI18n();
         <div i-carbon-campsite inline-block />
       </div>
       <p>
-        <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
+        <a
+          rel="noreferrer"
+          href="https://github.com/suplere/vitesse-quasar-nhost-template"
+          target="_blank"
+        >
           Vitesse
         </a>
       </p>
@@ -48,6 +52,20 @@ const { t } = useI18n();
         <button btn m-3 text-sm :disabled="!name" @click="go">
           {{ t("button.go") }}
         </button>
+      </div>
+      <div>
+        <p>
+          <em text-sm opacity-75>{{ t("intro.testMessage") }}</em>
+        </p>
+        <div>
+          <p>Email: <span class="text-teal">user@example.com</span></p>
+          <p>Password: <span class="text-teal">user1234</span></p>
+        </div>
+        <p>
+          <RouterLink to="/auth/register">{{
+            t("intro.testMessageCreteOwn")
+          }}</RouterLink>
+        </p>
       </div>
     </div>
   </QPage>
