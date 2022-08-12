@@ -1,4 +1,4 @@
-<p align='center'>Vitesse - Opinionated Vite Starter Template with NHost and Quasar support</p>
+<p align='center'>Vitesse - Opinionated Vite Starter Template with Nhost and Quasar support</p>
 
 <p  align='center'>
 <a  href="https://nhost-quasar-vite.netlify.app/">Live Demo</a>
@@ -56,7 +56,7 @@
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 - [`vite-ssg-sitemap`](https://github.com/jbaubree/vite-ssg-sitemap) - Sitemap generator
 - [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
-- [NHost.io](https://nhost.io/) integration - the best backend service for me. I this repo I show login, register, lost password and logout. In the Profile page I use storage (for Avatar) and GraphQL for update user data.
+- [Nhost](https://nhost.io/) integration - the best backend service for me. I this repo I show login, register, lost password and logout. In the Profile page I use storage (for Avatar) and GraphQL for update user data.
 
 ### Coding Style
 
@@ -78,12 +78,13 @@
 
 ## Backend Features
 
-For backend I will use NHOST.io features :
+For backend I will use [Nhost](http://nhost.io) features:
 
-- auth
-- storage
-- graphql
-- function
+- Database
+- GraphQL
+- Auth
+- Storage
+- Serverless Function
 
 ## Usage
 
@@ -96,7 +97,7 @@ cd nhost-demo-template
 nhost up
 ```
 
-You may see hasura console here : http://localhost:1337
+You may see Hasura Console here: http://localhost:1337
 
 Then you may run
 
@@ -125,14 +126,14 @@ Please do not forget set this ENV variables on the Netlify site:
 
 ```
 VITE_FRONTEND_URL - front end URL address ( without / at the end)
-VITE_NHOST_REGION - region from your NHost.io app
-VITE_NHOST_SUBDOMAIN - subdomain from your NHost.io app
+VITE_NHOST_REGION - region from your Nhost app
+VITE_NHOST_SUBDOMAIN - subdomain from your Nhost app
 ```
 
 ## Why
 
-I have been using Hasura GraphQL Engine as a backend for my projects for a long time. Now, after a long time, I found the NHost.io cloud solution and I have to say that, except for a few minor things (e.g. email templates only in the paid version), this product suits me.
+I have been using Hasura GraphQL Engine as a backend for my projects for a long time. Now, after a long time, I found the [Nhost](http://nhost.io) cloud solution and I have to say that, except for a few minor things (e.g. email templates only in the paid version), this product suits me.
 
-In the same way, I used the Vitesse template for my projects, so I decided to extend it with NHost.io functions. In my opinion, it is a combination of some of the best things available now.
+In the same way, I used the Vitesse template for my projects, so I decided to extend it with [Nhost Serverless Functions](https://docs.nhost.io/platform/serverless-functions). In my opinion, it is a combination of some of the best things available now.
 
 It is a complex solution and I will be happy if this template contributes to the expansion of already published examples and templates.
