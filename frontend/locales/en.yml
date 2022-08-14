@@ -62,6 +62,8 @@ menu:
   logoutTitle: Log out
   notAuthenticatedDescription: For anonymous users
   notAuthenticatedTitle: Unprotected page
+  oneSignalDescription: Webpush test using OneSignal
+  oneSignalTitle: OneSignal
   profileDescription: Edit user profile
   profileTitle: Profile
 newPassword:
@@ -71,8 +73,35 @@ newpassword:
   error: Error changing password
   paswordChange: The password has been changed
 not-found: Not found
+onesignal:
+  notConfigured: OneSignal not configured - VITE_ONESIGNAL_APP_ID not provided
+  notification:
+    body: Thanks for signing up!
+    title: You have enabled notifications!!
+  slidedown:
+    acceptButton: Allow
+    actionMessage: >-
+      Do you wish to receive notifications about updates on this website, for
+      example?
+    cancelButton: Cancel
+    category:
+      acceptButton: Allow
+      actionMessage: What notifications do I want to receive?
+      cancelButton: Prohibit
+      negativeUpdateButton: Cancel
+      positiveUpdateButton: Save choices
+      updateMessage: Modify notification category settings.
 page:
+  onesignal:
+    notifyAllUser: Send a notification to everyone
+    notifySelectedUsers: Send notification only to selected people
+    selectSuserLabel: Select the users you want to send a message to
+    selectedUsers: 'Selected users:'
+    title: Onesignal test
   profile:
+    notifyOff: Notifications disabled
+    notifyOn: Notifications enabled
+    showCategory: Subscription settings
     title: User profile
 profile:
   saveUserData: Save Changes

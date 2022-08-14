@@ -67,7 +67,7 @@ const schema = [
     label: () => t("form.mobile"),
   },
 ];
-
+const oneSignal = useOnesignalStore();
 // const auth = useAuthStore();
 const state = reactive<UpdateUser>({
   id: "",
@@ -158,6 +158,7 @@ watch(
       <QBtn @click="saveUserData" color="primary">{{ t("profile.saveUserData") }}</QBtn>
     </QCardActions>
   </QCard>
+  <OneSignalStatus v-if="oneSignal.oneSignalEnabled" />
   <QCard class="full-width">
     <QCardSection>
       <div class="text-center text-h6">{{ t("auth.changePasswordTitle") }}</div>

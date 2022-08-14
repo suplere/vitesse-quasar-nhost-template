@@ -1,0 +1,8 @@
+query notifyUsers(
+  $webpush_notify: WebpushNotifySettings!
+  $userIds: [String!]
+) {
+  notifyUsers(userIds: $userIds, webpush_notify: $webpush_notify) {
+    numIds
+  }
+}

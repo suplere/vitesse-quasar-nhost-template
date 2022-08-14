@@ -17,6 +17,8 @@ const onToggleDark = () => {
   q.dark.set(isDark.value);
 };
 
+const onesignal = useOnesignalStore();
+
 const linksData = [
   {
     title: () => t("button.home"),
@@ -39,6 +41,14 @@ const linksData = [
     link: "/about",
   },
   {
+    title: () => t("menu.oneSignalTitle"),
+    caption: () => t("menu.oneSignalDescription"),
+    icon: "online_prediction",
+    auth: true,
+    link: "/onesignal",
+    visible: () => onesignal.oneSignalEnabled,
+  },
+  {
     title: () => t("menu.loginTitle"),
     caption: () => t("menu.loginDescription"),
     icon: "login",
@@ -58,6 +68,13 @@ const isAuthenticated = useAuthenticated();
 const userData = useUserData();
 const links = computed(() => {
   return essentialLinks
+    .filter((l) => {
+      if (!l.visible) {
+        return true;
+      } else {
+        return l.visible();
+      }
+    })
     .filter((l) => {
       if (!l.auth) {
         return true;

@@ -57,6 +57,7 @@
 - [`vite-ssg-sitemap`](https://github.com/jbaubree/vite-ssg-sitemap) - Sitemap generator
 - [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
 - [Nhost](https://nhost.io/) integration - the best backend service for me. I this repo I show login, register, lost password and logout. In the Profile page I use storage (for Avatar) and GraphQL for update user data.
+- [OneSignal](https://onesignal.com/) integration - sample of using webpush notification and user managment for Onesignal.
 
 ### Coding Style
 
@@ -92,12 +93,26 @@ For backend I will use [Nhost](http://nhost.io) features:
 
 Prepare local backend with [nhost-cli](https://github.com/nhost/cli). Please instal cli as described [here](https://github.com/nhost/cli#installation). Then move to the nhost-demo-template folder
 
+[Onesignal](https://app.onesignal.com/) integration - Create on the Onesignal web new Web Application, with origin http://localhost:4010. Then fill this env variables in the nhost-demo-template folder - in the file .env.development
+
+```
+APP_FRONTEND_URL=http://localhost:4010
+ONE_SIGNAL_REST_API_KEY=your rest api key from Onesignal web
+ONE_SIGNAL_APP_ID=your APP_ID from Onesignal web
+```
+
 ```bash
 cd nhost-demo-template
 nhost up
 ```
 
 You may see Hasura Console here: http://localhost:1337
+
+[Onesignal](https://app.onesignal.com/) integration - If you want use Onesignal you need add these variables to the .env.development file in the frontend folder.
+```
+VITE_ONESIGNAL_APP_ID=the same as ONE_SIGNAL_APP_ID above
+VITE_ONESIGNAL_LOCALHOST=true
+```
 
 Then you may run
 
@@ -128,6 +143,13 @@ Please do not forget set this ENV variables on the Netlify site:
 VITE_FRONTEND_URL - front end URL address ( without / at the end)
 VITE_NHOST_REGION - region from your Nhost app
 VITE_NHOST_SUBDOMAIN - subdomain from your Nhost app
+```
+
+If you want use OnseSignal integration, you must register new application on the Onesignal web, for your netlify URL origin }or some custom domain).
+
+Then you need add this ENV variable:
+```
+VITE_ONESIGNAL_APP_ID - App id of the new web on one signal. Will be different from local dev.
 ```
 
 ## Why

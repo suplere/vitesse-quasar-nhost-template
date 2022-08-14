@@ -56,6 +56,8 @@ menu:
   logoutTitle: Odhlášení
   notAuthenticatedDescription: Pro anonymní uživatele
   notAuthenticatedTitle: Nechráněná stránka
+  oneSignalDescription: Webpush test s využitím OneSignal
+  oneSignalTitle: Onesignal
   profileDescription: Úprava profilu uživatele
   profileTitle: Profil
 newPassword:
@@ -65,8 +67,33 @@ newpassword:
   error: Chyba při změně hesla
   paswordChange: Heslo bylo změněno
 not-found: Nenalezeno
+onesignal:
+  notConfigured: OneSignal není nakonfigurován - VITE_ONESIGNAL_APP_ID není nastaveno
+  notification:
+    body: Děkuji za přihlášení!
+    title: Povolili jste notifikace!!
+  slidedown:
+    acceptButton: Povolit
+    actionMessage: Přejete si odebírat notifikace např. o aktualizacích na tomto webu?
+    cancelButton: Zrušit
+    category:
+      acceptButton: Povolit
+      actionMessage: Jaké oznámení chcet odebírat.
+      cancelButton: Zakázat
+      negativeUpdateButton: Zrušit
+      positiveUpdateButton: Uložit volby
+      updateMessage: Úprava nastavení kategorií oznámení.
 page:
+  onesignal:
+    notifyAllUser: Poslat notifikaci všem
+    notifySelectedUsers: Poslat notifikaci pouze vybraným
+    selectSuserLabel: Vyberte uživatele, kterým chcete poslat zprávu
+    selectedUsers: 'Vybraní uživatelé:'
+    title: Onesignal test
   profile:
+    notifyOff: Notifikace zakázány
+    notifyOn: Notifikace povoleny
+    showCategory: Nastavení odběru
     title: Profil uživatele
 profile:
   saveUserData: Uložit změny

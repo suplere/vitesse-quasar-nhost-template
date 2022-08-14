@@ -1,5 +1,6 @@
 import { createI18n } from "vue-i18n";
 import { type UserModule } from "~/types";
+// import cs from '../../locales/cs.yml'
 
 const messages = Object.fromEntries(
   Object.entries(

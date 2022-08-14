@@ -11,13 +11,15 @@
     "test": "vitest",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit",
-    "up": "taze major -I"
+    "up": "taze major -I",
+    "generate": "graphql-codegen --config codegen.yaml --errors-only"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@nhost/apollo": "^0.5.24",
     "@nhost/core": "^0.7.6",
     "@nhost/vue": "^0.4.0",
+    "@onesignal/onesignal-vue3": "^1.0.2",
     "@quasar/extras": "^1.15.1",
     "@vue/apollo-composable": "4.0.0-alpha.19",
     "@vueuse/core": "^9.1.0",
@@ -38,11 +40,16 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
+    "@graphql-codegen/cli": "^2.11.6",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-vue-apollo": "^3.3.3",
     "@iconify-json/carbon": "^1.1.7",
     "@intlify/vite-plugin-vue-i18n": "^6.0.0",
     "@quasar/vite-plugin": "^1.1.1",
     "@types/crypto-js": "^4.1.1",
     "@types/markdown-it-link-attributes": "^3.0.1",
+    "@types/node": "^18.7.3",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vue/test-utils": "^2.0.2",
