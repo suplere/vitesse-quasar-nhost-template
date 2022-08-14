@@ -10,7 +10,7 @@ export const getHash = (text: string): string => {
   hmac.update(text);
   return hmac.digest("hex");
 };
-
+console.log(ONE_SIGNAL_APP_ID);
 const client = new OneSignal.Client(ONE_SIGNAL_APP_ID, ONESIGNAL_REST_API_KEY);
 
 export const sendNotification = (body: CreateNotificationBody) => {

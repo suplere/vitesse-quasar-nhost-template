@@ -7,3 +7,12 @@ mutation addUserData($object: users_data_insert_input!) {
   }
 }
 `;
+
+export const GET_ALL_USERS = `
+query allUsers {
+  users {
+    id
+    metadata
+  }
+}
+`;
