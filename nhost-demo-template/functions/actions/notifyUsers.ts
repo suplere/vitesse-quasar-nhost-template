@@ -12,7 +12,7 @@ const handler = async (req: Request, res: Response) => {
   const params: notifyUsersArgs = req.body.input;
 
   try {
-    console.log(params);
+    // console.log(params);
     const result = await notifyUsersHandler(params);
     // success
     return res.json(result);

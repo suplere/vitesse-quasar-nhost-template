@@ -53,6 +53,10 @@ input Int_comparison_exp {
   _nin: [Int!]
 }
 
+type NotifyResult {
+  numIds: Int
+}
+
 """
 Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'.
 """
@@ -104,6 +108,18 @@ input String_comparison_exp {
 
   """does the column match the given SQL regular expression"""
   _similar: String
+}
+
+input WebpushLangString {
+  cs: String
+  en: String!
+}
+
+input WebpushNotifySettings {
+  contents: WebpushLangString!
+  headings: WebpushLangString!
+  subtitle: WebpushLangString
+  url: String!
 }
 
 """
@@ -3641,6 +3657,7 @@ type query_root {
     """filter the rows returned"""
     where: files_bool_exp
   ): files_aggregate!
+  notifyUsers(userIds: [String], webpush_notify: WebpushNotifySettings): NotifyResult
 
   """fetch data from the table: "auth.users" using primary key columns"""
   user(id: uuid!): users

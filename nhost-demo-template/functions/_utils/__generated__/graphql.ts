@@ -54,6 +54,11 @@ export type Int_Comparison_Exp = {
   _nin?: InputMaybe<Array<Scalars['Int']>>;
 };
 
+export type NotifyResult = {
+  __typename?: 'NotifyResult';
+  numIds?: Maybe<Scalars['Int']>;
+};
+
 /** Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. */
 export type String_Comparison_Exp = {
   _eq?: InputMaybe<Scalars['String']>;
@@ -85,6 +90,18 @@ export type String_Comparison_Exp = {
   _regex?: InputMaybe<Scalars['String']>;
   /** does the column match the given SQL regular expression */
   _similar?: InputMaybe<Scalars['String']>;
+};
+
+export type WebpushLangString = {
+  cs?: InputMaybe<Scalars['String']>;
+  en: Scalars['String'];
+};
+
+export type WebpushNotifySettings = {
+  contents: WebpushLangString;
+  headings: WebpushLangString;
+  subtitle?: InputMaybe<WebpushLangString>;
+  url: Scalars['String'];
 };
 
 /** Oauth requests, inserted before redirecting to the provider's site. Don't modify its structure as Hasura Auth relies on it to function properly. */
@@ -2819,6 +2836,7 @@ export type Query_Root = {
   files: Array<Files>;
   /** fetch aggregated fields from the table: "storage.files" */
   filesAggregate: Files_Aggregate;
+  notifyUsers?: Maybe<NotifyResult>;
   /** fetch data from the table: "auth.users" using primary key columns */
   user?: Maybe<Users>;
   /** fetch data from the table: "auth.users" */
@@ -3038,6 +3056,12 @@ export type Query_RootFilesAggregateArgs = {
   offset?: InputMaybe<Scalars['Int']>;
   order_by?: InputMaybe<Array<Files_Order_By>>;
   where?: InputMaybe<Files_Bool_Exp>;
+};
+
+
+export type Query_RootNotifyUsersArgs = {
+  userIds?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  webpush_notify?: InputMaybe<WebpushNotifySettings>;
 };
 
 
