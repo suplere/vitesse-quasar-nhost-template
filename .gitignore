@@ -9,3 +9,6 @@ node_modules
 *.log
 pnpm-lock.yaml
 nhost-demo-template/.env.development
+nhost-demo-template/*.env
+nhost-demo-template/*.development
+nhost-demo-template/.env.development
