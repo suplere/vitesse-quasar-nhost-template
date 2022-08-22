@@ -73,93 +73,93 @@ configuration:
     update: updateUsers
     update_by_pk: updateUser
 object_relationships:
-- name: defaultRoleByRole
-  using:
-    foreign_key_constraint_on: default_role
-- name: user_data
-  using:
-    foreign_key_constraint_on:
-      column: user_id
-      table:
-        name: users_data
-        schema: public
+  - name: defaultRoleByRole
+    using:
+      foreign_key_constraint_on: default_role
+  - name: user_data
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: users_data
+          schema: public
 array_relationships:
-- name: authenticators
-  using:
-    foreign_key_constraint_on:
-      column: user_id
-      table:
-        name: user_authenticators
-        schema: auth
-- name: refreshTokens
-  using:
-    foreign_key_constraint_on:
-      column: user_id
-      table:
-        name: refresh_tokens
-        schema: auth
-- name: roles
-  using:
-    foreign_key_constraint_on:
-      column: user_id
-      table:
-        name: user_roles
-        schema: auth
-- name: userProviders
-  using:
-    foreign_key_constraint_on:
-      column: user_id
-      table:
-        name: user_providers
-        schema: auth
+  - name: authenticators
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: user_authenticators
+          schema: auth
+  - name: refreshTokens
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: refresh_tokens
+          schema: auth
+  - name: roles
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: user_roles
+          schema: auth
+  - name: userProviders
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: user_providers
+          schema: auth
 insert_permissions:
-- permission:
-    check:
-      id:
-        _eq: X-Hasura-User-Id
-    columns:
-    - avatar_url
-    - display_name
-    - email
-    - id
-    - metadata
-  role: user
+  - role: user
+    permission:
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+      columns:
+        - avatar_url
+        - display_name
+        - email
+        - id
+        - metadata
 select_permissions:
-- permission:
-    allow_aggregations: true
-    columns:
-    - avatar_url
-    - display_name
-    - email
-    - id
-    - metadata
-    filter: {}
-  role: user
+  - role: user
+    permission:
+      columns:
+        - avatar_url
+        - display_name
+        - email
+        - id
+        - metadata
+      filter: {}
+      allow_aggregations: true
 update_permissions:
-- permission:
-    check:
-      id:
-        _eq: X-Hasura-User-Id
-    columns:
-    - avatar_url
-    - display_name
-    - id
-    - metadata
-    filter:
-      id:
-        _eq: X-Hasura-User-Id
-  role: user
+  - role: user
+    permission:
+      columns:
+        - avatar_url
+        - display_name
+        - id
+        - metadata
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+      check:
+        id:
+          _eq: X-Hasura-User-Id
 event_triggers:
-- definition:
-    enable_manual: false
-    insert:
-      columns: "*"
-  headers:
-  - name: nhost-webhook-secret
-    value_from_env: NHOST_WEBHOOK_SECRET
-  name: userCreate
-  retry_conf:
-    interval_sec: 10
-    num_retries: 0
-    timeout_sec: 60
-  webhook: "{{NHOST_BACKEND_URL}}/v1/functions/events/userCreate"
+  - name: userCreate
+    definition:
+      enable_manual: false
+      insert:
+        columns: '*'
+    retry_conf:
+      interval_sec: 10
+      num_retries: 0
+      timeout_sec: 60
+    webhook: '{{NHOST_BACKEND_URL}}/v1/functions/events/userCreate'
+    headers:
+      - name: nhost-webhook-secret
+        value_from_env: NHOST_WEBHOOK_SECRET

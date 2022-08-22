@@ -40,24 +40,24 @@ configuration:
     update: updateBuckets
     update_by_pk: updateBucket
 array_relationships:
-- name: files
-  using:
-    foreign_key_constraint_on:
-      column: bucket_id
-      table:
-        name: files
-        schema: storage
+  - name: files
+    using:
+      foreign_key_constraint_on:
+        column: bucket_id
+        table:
+          name: files
+          schema: storage
 select_permissions:
-- permission:
-    allow_aggregations: true
-    columns:
-    - presigned_urls_enabled
-    - download_expiration
-    - max_upload_file_size
-    - min_upload_file_size
-    - cache_control
-    - id
-    - created_at
-    - updated_at
-    filter: {}
-  role: user
+  - role: user
+    permission:
+      columns:
+        - presigned_urls_enabled
+        - download_expiration
+        - max_upload_file_size
+        - min_upload_file_size
+        - cache_control
+        - id
+        - created_at
+        - updated_at
+      filter: {}
+      allow_aggregations: true
