@@ -17,7 +17,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@nhost/apollo": "^4.0.0",
-    "@nhost/core": "^0.7.6",
+    "@nhost/core": "^0.9.0",
     "@nhost/vue": "^1.0.0",
     "@onesignal/onesignal-vue3": "^1.0.2",
     "@quasar/extras": "^1.15.1",
