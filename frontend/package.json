@@ -75,6 +75,6 @@
     "vite-plugin-vue-layouts": "^0.7.0",
     "vite-plugin-vue-markdown": "^0.21.1",
     "vitest": "^0.21.0",
-    "vue-tsc": "^0.39.5"
+    "vue-tsc": "^0.40.0"
   }
 }
