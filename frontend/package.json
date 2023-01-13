@@ -23,7 +23,7 @@
     "@quasar/extras": "^1.15.1",
     "@vue/apollo-composable": "4.0.0-beta.1",
     "@vueuse/core": "^9.1.0",
-    "@vueuse/head": "^0.7.9",
+    "@vueuse/head": "^0.9.0",
     "blitzar": "^1.2.2",
     "crypto-js": "^4.1.1",
     "graphql": "^16.5.0",
