@@ -18,7 +18,7 @@
     "@apollo/client": "^3.6.9",
     "@nhost/apollo": "^0.5.24",
     "@nhost/core": "^0.7.6",
-    "@nhost/vue": "^0.4.0",
+    "@nhost/vue": "^1.0.0",
     "@onesignal/onesignal-vue3": "^1.0.2",
     "@quasar/extras": "^1.15.1",
     "@vue/apollo-composable": "4.0.0-beta.1",
