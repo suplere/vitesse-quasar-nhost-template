@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "../frontend"
+    },
+    {
+      "path": "../nhost-demo-template"
+    },
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "i18n-ally.sourceLanguage": "cs",
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.sortKeys": true,
+    "files.associations": {
+      "*.css": "postcss"
+    },
+    "vite.port": 4010,
+    "vue3snippets.enable-compile-vue-file-on-did-save-code": true,
+    "i18n-ally.localesPaths": ["locales"]
+  }
+}

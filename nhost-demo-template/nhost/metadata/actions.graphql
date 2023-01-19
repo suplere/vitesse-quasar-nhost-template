@@ -1,0 +1,23 @@
+type Query {
+  notifyUsers(
+    userIds: [String]
+    webpush_notify: WebpushNotifySettings
+  ): NotifyResult
+}
+
+input WebpushNotifySettings {
+  contents: WebpushLangString!
+  url: String!
+  subtitle: WebpushLangString
+  headings: WebpushLangString!
+}
+
+input WebpushLangString {
+  en: String!
+  cs: String
+}
+
+type NotifyResult {
+  numIds: Int
+}
+

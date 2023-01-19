@@ -1,0 +1,18 @@
+actions:
+  - name: notifyUsers
+    definition:
+      kind: ""
+      handler: '{{NHOST_BACKEND_URL}}/v1/functions/actions/notifyUsers'
+      headers:
+        - name: nhost-webhook-secret
+          value_from_env: NHOST_WEBHOOK_SECRET
+    permissions:
+      - role: user
+custom_types:
+  enums: []
+  input_objects:
+    - name: WebpushNotifySettings
+    - name: WebpushLangString
+  objects:
+    - name: NotifyResult
+  scalars: []

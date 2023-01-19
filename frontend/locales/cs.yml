@@ -1,0 +1,108 @@
+auth:
+  changePasswordTitle: Změna hesla
+  changePasswordTitleError: Nelze měnit heslo u testovacího uživatele!
+  forgotPasswordMessage: Obnovení zapomenutého hesla přes email.
+  forgotPasswordTitle: Zapomenuté heslo
+  loginTitle: Přihlášení uživatele
+  registerTitle: Registace uživatele
+  toForgotPassword: Zapomenuté heslo
+  toLogin: Mám účet. Chci se přihlásit.
+  toRegister: Nemám účet. Vytvořit nový.
+button:
+  about: O
+  back: Zpět
+  deleteAvatar: Smazat Avatar
+  go: JÍT
+  home: Doma
+  toggle_dark: Přepnutí tmavého režimu
+  toggle_langs: Změna jazyku
+forgotPassword:
+  button: Zapomenuté heslo
+  errorTitle: Došlo k chybě při zpracování požadavku na obnovu hesla.
+  successTitle: Požadavek byl zpracován. Zkontrolujte si prosím svou emailovou schránku.
+  userMessage: Požadavek na obnovu hesla je zpracováván
+form:
+  cancel: Zrušit
+  delete: Smazat
+  displayName: Zobrazené jméno
+  edit: Upravit
+  email: Email
+  firstname: Jméno
+  lastname: Příjmení
+  mobile: Mobilní telefon
+  password: Heslo
+  passwordMatch: Potvrzení hesla
+  save: Uložit
+  uploadFile: Zde prosím nahrajte obrázek
+intro:
+  aka: Také známý jako
+  desc: Předběžná šablona Vite
+  dynamic-route: Demo dynamické trasy
+  hi: Ahoj, {name}!
+  testMessage: 'Pro testovací účely na mém livedemu můžete použít tyto údaje:'
+  testMessageCreteOwn: Nebo si vytvořte vlastní účet, přes funkci vytvoření nového uživatele.
+  whats-your-name: Jaké je tvé jméno?
+layout:
+  appName: Šablona NHost + Quasar + Vite
+  mainMenu: Hlavní menu
+login:
+  button: Přihlášení uživatele
+  errorTitle: Došlok chybě při přihlášení uživatele.
+  userMessage: Požadavek na přihlášení je zpracováván.
+menu:
+  loginDescription: Přihlášení uživatele
+  loginTitle: Přihlášení
+  logoutDescription: Odhlášení uživatele
+  logoutTitle: Odhlášení
+  notAuthenticatedDescription: Pro anonymní uživatele
+  notAuthenticatedTitle: Nechráněná stránka
+  oneSignalDescription: Webpush test s využitím OneSignal
+  oneSignalTitle: Onesignal
+  profileDescription: Úprava profilu uživatele
+  profileTitle: Profil
+newPassword:
+  button: Změna hesla
+  userMessage: Požadavek na změnu hesla se zpracovává
+newpassword:
+  error: Chyba při změně hesla
+  paswordChange: Heslo bylo změněno
+not-found: Nenalezeno
+onesignal:
+  notConfigured: OneSignal není nakonfigurován - VITE_ONESIGNAL_APP_ID není nastaveno
+  notification:
+    body: Děkuji za přihlášení!
+    title: Povolili jste notifikace!!
+  slidedown:
+    acceptButton: Povolit
+    actionMessage: Přejete si odebírat notifikace např. o aktualizacích na tomto webu?
+    cancelButton: Zrušit
+    category:
+      acceptButton: Povolit
+      actionMessage: Jaké oznámení chcet odebírat.
+      cancelButton: Zakázat
+      negativeUpdateButton: Zrušit
+      positiveUpdateButton: Uložit volby
+      updateMessage: Úprava nastavení kategorií oznámení.
+page:
+  onesignal:
+    notifyAllUser: Poslat notifikaci všem
+    notifySelectedUsers: Poslat notifikaci pouze vybraným
+    selectSuserLabel: Vyberte uživatele, kterým chcete poslat zprávu
+    selectedUsers: 'Vybraní uživatelé:'
+    title: Onesignal test
+  profile:
+    notifyOff: Notifikace zakázány
+    notifyOn: Notifikace povoleny
+    showCategory: Nastavení odběru
+    title: Profil uživatele
+profile:
+  saveUserData: Uložit změny
+register:
+  button: Registrace uživatele
+  errorTitle: Došlo k chybě při vytváření nového účtu.
+  messageSent: Nový účet vytvořen. Zkontrolujte emailovou schránku a potvrďte svůj email.
+  userMessage: POždavek na vytvoření nového účtu je zpracováván.
+validation:
+  emailNotValid: Email nemá správný formát
+  passwordDontMatch: Hesla nesouhlasí
+  requiredField: Pole je povinné

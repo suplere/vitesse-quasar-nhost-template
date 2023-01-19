@@ -1,0 +1,118 @@
+auth:
+  changePasswordTitle: Changing the password
+  changePasswordTitleError: It is not possible to change the password for a test user!
+  forgotPasswordMessage: Recovering a forgotten password via email.
+  forgotPasswordTitle: Forgotten password
+  loginTitle: User login
+  registerTitle: User registration
+  toForgotPassword: Forgotten password
+  toLogin: |-
+    I have an account. 
+    I want to log in.
+  toRegister: |-
+    I don't have an account. 
+    Create a new one.
+button:
+  about: About
+  back: Back
+  deleteAvatar: Delete Avatar
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+forgotPassword:
+  button: Forgotten password
+  errorTitle: An error occurred while processing the password reset request.
+  successTitle: |-
+    The request has been processed. 
+    Please check your email inbox.
+  userMessage: Your password reset request is being processed
+form:
+  cancel: Cancel
+  delete: Delete
+  displayName: Display name
+  edit: Edit
+  email: E-mail
+  firstname: Name
+  lastname: Surname
+  mobile: Mobile phone
+  password: Password
+  passwordMatch: Password confirmation
+  save: Save
+  uploadFile: Please upload an image here
+intro:
+  aka: Also known as
+  desc: Opinionated Vite Starter Template
+  dynamic-route: Demo of dynamic route
+  hi: Hi, {name}!
+  testMessage: 'You can use the following data for testing purposes on my live demo:'
+  testMessageCreteOwn: Or create your own account via the function of creating a new user.
+  whats-your-name: What's your name?
+layout:
+  appName: NHost Quasar Vite template
+  mainMenu: Main menu
+login:
+  button: User login
+  errorTitle: An error occurred while logging in the user.
+  userMessage: Your login request is being processed.
+menu:
+  loginDescription: User login
+  loginTitle: Login
+  logoutDescription: User logout
+  logoutTitle: Log out
+  notAuthenticatedDescription: For anonymous users
+  notAuthenticatedTitle: Unprotected page
+  oneSignalDescription: Webpush test using OneSignal
+  oneSignalTitle: OneSignal
+  profileDescription: Edit user profile
+  profileTitle: Profile
+newPassword:
+  button: Changing the password
+  userMessage: Your password change request is being processed
+newpassword:
+  error: Error changing password
+  paswordChange: The password has been changed
+not-found: Not found
+onesignal:
+  notConfigured: OneSignal not configured - VITE_ONESIGNAL_APP_ID not provided
+  notification:
+    body: Thanks for signing up!
+    title: You have enabled notifications!!
+  slidedown:
+    acceptButton: Allow
+    actionMessage: >-
+      Do you wish to receive notifications about updates on this website, for
+      example?
+    cancelButton: Cancel
+    category:
+      acceptButton: Allow
+      actionMessage: What notifications do I want to receive?
+      cancelButton: Prohibit
+      negativeUpdateButton: Cancel
+      positiveUpdateButton: Save choices
+      updateMessage: Modify notification category settings.
+page:
+  onesignal:
+    notifyAllUser: Send a notification to everyone
+    notifySelectedUsers: Send notification only to selected people
+    selectSuserLabel: Select the users you want to send a message to
+    selectedUsers: 'Selected users:'
+    title: Onesignal test
+  profile:
+    notifyOff: Notifications disabled
+    notifyOn: Notifications enabled
+    showCategory: Subscription settings
+    title: User profile
+profile:
+  saveUserData: Save Changes
+register:
+  button: User registration
+  errorTitle: An error occurred while creating a new account.
+  messageSent: |-
+    New account created. 
+    Check your email inbox and confirm your email.
+  userMessage: The request to create a new account is being processed.
+validation:
+  emailNotValid: The email is not in the correct format
+  passwordDontMatch: Passwords do not match
+  requiredField: Field is required
