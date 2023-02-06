@@ -21,7 +21,7 @@
     "@nhost/vue": "^1.0.0",
     "@onesignal/onesignal-vue3": "^1.0.2",
     "@quasar/extras": "^1.15.1",
-    "@vue/apollo-composable": "4.0.0-beta.1",
+    "@vue/apollo-composable": "4.0.0-beta.2",
     "@vueuse/core": "^9.1.0",
     "@vueuse/head": "^1.0.0",
     "blitzar": "^1.2.2",
