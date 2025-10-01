@@ -15,7 +15,7 @@
     "generate": "graphql-codegen --config codegen.yaml --errors-only"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.9",
+    "@apollo/client": "^4.0.0",
     "@nhost/apollo": "^5.0.0",
     "@nhost/core": "^0.9.0",
     "@nhost/vue": "^1.0.0",
