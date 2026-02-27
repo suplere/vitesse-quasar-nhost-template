@@ -62,7 +62,7 @@
     "markdown-it-shiki": "^0.8.0",
     "pnpm": "^7.8.0",
     "sass": "1.58.3",
-    "shiki": "^0.14.0",
+    "shiki": "^4.0.0",
     "taze": "^0.8.0",
     "typescript": "^5.0.0",
     "unocss": "^0.50.0",
